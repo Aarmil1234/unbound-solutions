@@ -1,5 +1,5 @@
 import { Linkedin, Twitter, Instagram, Github } from "lucide-react";
-import unboundLogo from "@/assets/unbound-logo.png";
+import unboundLogo from "@/assets/logo-short.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +17,7 @@ const Footer = () => {
       { label: "Cybersecurity", href: "#services" },
     ],
     company: [
-      { label: "About me", href: "#about" },
+      { label: "About Us", href: "#about" },
       { label: "Contact", href: "#contact" },
       { label: "Careers", href: "#" },
       { label: "Blog", href: "#" },

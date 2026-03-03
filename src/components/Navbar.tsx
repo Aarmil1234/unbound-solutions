@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
+import logoFull from "@/assets/logo-full.png";
 
 const navLinks = [
 { href: "#home", label: "Home" },
@@ -51,17 +52,21 @@ const Navbar = () => {
       <div
         className={`flex items-center gap-2 transition-all duration-500 ${
         isScrolled ?
-        "bg-background/80 backdrop-blur-2xl border border-border/50 shadow-lg rounded-full px-3 py-2" :
-        "bg-background/40 backdrop-blur-xl border border-border/30 rounded-full px-3 py-2"}`
+        "bg-background/80 backdrop-blur-2xl border border-border/50 shadow-lg rounded-full px-3 py-2 border border-white/50" :
+        "bg-background/40 backdrop-blur-xl border border-border/30 rounded-full px-3 py-2 border border-white/50"}`
         }>
 
         {/* Logo */}
         <a
-          href="#home"
-          className="text-lg font-bold gradient-text hover:opacity-90 transition-opacity tracking-tight px-3">
-
-          Unbound Solutions 
-        </a>
+  href="#home"
+  className="flex items-center px-3"
+>
+  <img
+    src={logoFull}
+    alt="Unbound Solutions Logo"
+    className="h-10 w-auto"
+  />
+</a>
 
         {/* Desktop Navigation - Center Links */}
         <div className="hidden md:flex items-center">
@@ -80,17 +85,7 @@ const Navbar = () => {
 
         {/* Right side actions */}
         <div className="hidden md:flex items-center gap-2 ml-2">
-          <button
-            onClick={toggleDarkMode}
-            className="p-2.5 rounded-full hover:bg-muted transition-all duration-300"
-            aria-label="Toggle dark mode">
-
-            {isDark ?
-            <Sun className="w-4 h-4 text-primary" /> :
-
-            <Moon className="w-4 h-4 text-muted-foreground" />
-            }
-          </button>
+      
 
           <a href="#contact" className="btn-primary text-sm !py-2 !px-4">
             Get Started
@@ -99,17 +94,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-2">
-          <button
-            onClick={toggleDarkMode}
-            className="p-2 rounded-full hover:bg-muted transition-colors"
-            aria-label="Toggle dark mode">
-
-            {isDark ?
-            <Sun className="w-5 h-5 text-primary" /> :
-
-            <Moon className="w-5 h-5 text-muted-foreground" />
-            }
-          </button>
+          
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-foreground p-2 rounded-full hover:bg-muted transition-colors">
