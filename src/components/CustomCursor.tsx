@@ -72,7 +72,6 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* Trail dots */}
       <AnimatePresence>
         {trail.map((dot, index) => (
           <motion.div

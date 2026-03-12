@@ -5,6 +5,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Blogs from "./pages/Blogs";
+import BlogDetail from "./pages/BlogDetails";
+import AdminBlogs from "./pages/AdminBlog";
+import Login from "./admin/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Dashboard from "./admin/Dashboard";
+import AddBlog from "./admin/AddBlog";
 
 const queryClient = new QueryClient();
 
@@ -15,9 +22,30 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<BlogDetail />} />
+
+          <Route path="/admin/login" element={<Login />} />
+
+          <Route
+            path="/admin/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/admin/add-blog"
+            element={
+              <ProtectedRoute>
+                <AddBlog />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
