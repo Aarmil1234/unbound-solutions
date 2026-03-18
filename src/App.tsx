@@ -12,6 +12,7 @@ import Login from "./admin/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./admin/Dashboard";
 import AddBlog from "./admin/AddBlog";
+import DSGVOBlog from "./blogs/German-clients";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/blogs/:id" element={<BlogDetail />} />
 
           <Route path="/admin/login" element={<Login />} />
+          <Route path="/blogs/german-clients" element={<DSGVOBlog />} />
 
           <Route
             path="/admin/dashboard"
