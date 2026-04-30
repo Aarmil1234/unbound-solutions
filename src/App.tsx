@@ -7,12 +7,12 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Blogs from "./pages/Blogs";
 import BlogDetail from "./pages/BlogDetails";
-import AdminBlogs from "./pages/AdminBlog";
 import Login from "./admin/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./admin/Dashboard";
 import AddBlog from "./admin/AddBlog";
 import DSGVOBlog from "./blogs/German-clients";
+import AboutBridgePage from "./blogs/DSGVO-Compliant-Websites";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +30,7 @@ const App = () => (
 
           <Route path="/admin/login" element={<Login />} />
           <Route path="/blogs/german-clients" element={<DSGVOBlog />} />
+          <Route path="/blogs/dsgvo-compliant-websites" element={<AboutBridgePage />} />
 
           <Route
             path="/admin/dashboard"

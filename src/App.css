@@ -40,3 +40,60 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.blog-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  color: hsl(210,30%,85%);
+  line-height: 1.8;
+}
+
+/* Headings */
+.blog-content h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 2rem 0 1rem;
+}
+
+.blog-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 1.8rem 0 1rem;
+}
+
+.blog-content h3 {
+  font-size: 24px;
+  margin: 1.5rem 0 0.8rem;
+}
+
+/* Paragraph */
+.blog-content p {
+  margin-bottom: 1rem;
+  color: hsl(210,20%,75%);
+}
+
+/* Lists */
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Images */
+.blog-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  border-left: 4px solid hsl(200,100%,74%);
+  padding-left: 15px;
+  color: hsl(210,20%,70%);
+  margin: 20px 0;
+}
